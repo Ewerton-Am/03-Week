@@ -1,18 +1,6 @@
-import getpass
 import pandas as pd
 from company import my_company
-from usuario_senha import managers, aut
 
-mngr = managers()
-#Authentification function
-def authenticate():
-    login = input("Login: ")
-    passw = getpass.getpass("Password: ")
-    if login in mngr and mngr[login] == passw:
-       print('Access Successfully.')
-       return True
-    else:
-       return aut(login, passw)
 # My CRUD Function
 def menu_crud():
     db = my_company()
@@ -55,10 +43,3 @@ def menu_crud():
             break
         else:
             print("Invalid Option! Try Again.")
-
-# Main Execution 
-if authenticate():
-    menu_crud()
-else:
-    print("Access denied.")
-

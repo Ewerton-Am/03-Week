@@ -11,7 +11,7 @@ def my_company():
 
     point = conection.cursor()
 
-    # Cria tabela se não existir
+    # Create table if not exist
     point.execute("""
         CREATE TABLE IF NOT EXISTS employees (
             id INT AUTO_INCREMENT PRIMARY KEY,
@@ -20,7 +20,7 @@ def my_company():
         )
     """)
 
-    # Insere os dados apenas se estiver vazia
+    # Insert data only if empty
     point.execute("SELECT COUNT(*) FROM employees")
     if point.fetchone()[0] == 0:
         point.execute("""
@@ -40,3 +40,4 @@ def my_company():
 
     point.close()
     return conection
+
