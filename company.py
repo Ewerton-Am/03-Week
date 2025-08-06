@@ -1,13 +1,8 @@
 import mysql.connector
+import db
 
 def my_company():
-    # Conexão com o banco
-    conection = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="2t2o3n6Ok15ago1996.",
-        database="my_company"
-    )
+    conection = db.db_connection()
 
     point = conection.cursor()
 

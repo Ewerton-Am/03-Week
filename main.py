@@ -1,7 +1,8 @@
-import getpass
+import tkinter as tk
+from tkinter import messagebox
 import pandas as pd
 from company import my_company
-from user_pass import managers, aut
+from user_pass import managers
 from auth import authenticate
 from crud import menu_crud
 
@@ -9,5 +10,5 @@ from crud import menu_crud
 if authenticate():
     menu_crud()
 else:
-    print("Access denied.")
+    messagebox.showerror("Authentication", "Login failed.")
 
