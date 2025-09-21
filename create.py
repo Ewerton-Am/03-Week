@@ -1,14 +1,16 @@
 import customtkinter as ctk
 from company import my_company
 from tkinter import messagebox
-import crud
 
-def create_item():
+
+def create_item(root):
+    root.withdraw()  # Hide main window
+    
     form_window = ctk.CTk()
     form_window.title("Add employeer")
     form_window.geometry("400x300")
 
-    # --- Labels e Entradas ---
+    # --- Labels and Entrys ---
     label_position = ctk.CTkLabel(form_window, text="Positions:")
     label_position.pack(pady=(20, 5))
 
@@ -48,7 +50,7 @@ def create_item():
 
     def go_back():
         form_window.destroy()
-        crud.deiconify()
+        root.deiconify()
 
     button_back = ctk.CTkButton(form_window, text="Back", command=go_back)
     button_back.pack(pady=10)

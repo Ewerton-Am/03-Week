@@ -1,5 +1,3 @@
-import pandas as pd
-from company import my_company
 import customtkinter as ctk
 from create import create_item
 from read import read_item
