@@ -1,10 +1,11 @@
 import customtkinter as ctk
-import tkinter as ttk
 import pandas as pd
 import db
 
 db.db_connection()
-def read_item():
+def read_item(root):
+    root.withdraw()  # Hide main window
+    
     def rd():
         conn = db.db_connection()
         query = "SELECT * FROM employees"

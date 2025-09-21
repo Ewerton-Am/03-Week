@@ -1,9 +1,10 @@
 import customtkinter as ctk
 from company import my_company
 from tkinter import messagebox
-import crud
 
-def update_item():
+def update_item(root):
+    root.withdraw()  # Hide main window
+    
     window = ctk.CTk()
     window.title("Update Employee")
     window.geometry("400x350")

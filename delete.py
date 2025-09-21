@@ -1,9 +1,10 @@
 import customtkinter as ctk
 from company import my_company
 from tkinter import messagebox
-import crud
 
-def delete_item():
+def delete_item(root):
+    root.withdraw()  # Hide main window
+
     window = ctk.CTk()
     window.title("Delete Employee")
     window.geometry("300x250")
