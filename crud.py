@@ -13,16 +13,16 @@ def menu_crud():
     root.geometry("300x400")
 
     # Buttons for options
-    button_create = ctk.CTkButton(root, text="Create", command=create_item)
+    button_create = ctk.CTkButton(root, text="Create", command=create_item(root))
     button_create.pack(pady=(10, 0))
 
-    button_read = ctk.CTkButton(root, text="Read", command=read_item)
+    button_read = ctk.CTkButton(root, text="Read", command=read_item(root))
     button_read.pack(pady=(10, 0))
 
-    button_update = ctk.CTkButton(root, text="Update", command=update_item)
+    button_update = ctk.CTkButton(root, text="Update", command=update_item(root))
     button_update.pack(pady=(10, 0))
 
-    button_delete = ctk.CTkButton(root, text="Delete", command=delete_item)
+    button_delete = ctk.CTkButton(root, text="Delete", command=delete_item(root))
     button_delete.pack(pady=(10, 0))
     
     button_exit = ctk.CTkButton(root, text="Exit", command=root.destroy)
