@@ -36,6 +36,9 @@ def delete_item(root):
     btn_delete = ctk.CTkButton(window, text="Delete", command=delete_employee)
     btn_delete.pack(pady=20)
 
-    ctk.CTkButton(window, text="Back", command=window.destroy).pack(pady=10)
+    def go_back():
+        window.destroy()
+        root.deiconify()
+    ctk.CTkButton(window, text="Back", command=go_back).pack(pady=10)
 
     window.mainloop()

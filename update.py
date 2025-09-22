@@ -46,7 +46,10 @@ def update_item(root):
 
     btn = ctk.CTkButton(window, text="Update", command=update_employee)
     btn.pack(pady=20)
-
-    ctk.CTkButton(window, text="Back", command=window.destroy).pack(pady=10)
+    
+    def go_back():
+        window.destroy()
+        root.deiconify()
+    ctk.CTkButton(window, text="Back", command=go_back).pack(pady=10)
 
     window.mainloop()

@@ -33,7 +33,10 @@ def read_item(root):
     textbox.insert("0.0", df.to_string(index=False))
 
     # Close Button
-    botao_fechar = ctk.CTkButton(form_window, text="close", command=form_window.destroy)
+    def go_back():
+        form_window.destroy()
+        root.deiconify()
+    botao_fechar = ctk.CTkButton(form_window, text="close", command=go_back)
     botao_fechar.pack(pady=10)
 
     form_window.mainloop()
