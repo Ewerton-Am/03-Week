@@ -11,5 +11,3 @@ if authenticate():
     menu_crud()
 else:
     messagebox.showerror("Authentication", "Login failed.")
-    
-
